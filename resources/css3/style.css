@@ -41,6 +41,7 @@ body {
     display: inline-block;
     border-radius: 100px;
     transition: all .2s; 
+    position: relative;
 }
 
 .btn:hover {
@@ -56,6 +57,39 @@ body {
 .btn-white {
     background-color: #fff;
     color: #777;
+}
+
+/* BUTTON WHITE FADE ANIMATION */
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated-1 {
+     /* -- ANIMATION IMPLEMENTATION -- */
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: .75s;
+    animation-fill-mode: backwards;
 }
 
 /* ------------------------------------------- */
@@ -121,7 +155,6 @@ body {
 }
 
 /* --- ANIMATION FOR HEADER TEXT SETUP | STARTS --- */ 
-            /* -- ANIMATION moveInLeft -- */
 @keyframes moveInLeft {
     /* - WHAT HAPPENS AT THE BEGINNING OF THE ANIMATION - */
     0% {
@@ -140,9 +173,9 @@ body {
         transform: translate(0);
     }
 }
+/* --- ANIMATION FOR HEADER TEXT SETUP | ENDS --- */ 
 
-/* --- ANIMATION FOR HEADER TEXT SETUP | STARTS --- */ 
-        /* -- ANIMATION moveInRight -- */
+/* --- ANIMATION FOR HEADER SUB TEXT SETUP | STARTS --- */ 
 @keyframes moveInRight {
     /* - WHAT HAPPENS AT THE BEGINNING OF THE ANIMATION - */
     0% {
@@ -161,4 +194,20 @@ body {
         transform: translate(0);
     }
 }
-/* --- ANIMATION FOR HEADER TEXT SETUP | ENDS --- */ 
+/* --- ANIMATION FOR HEADER SUB TEXT SETUP | ENDS --- */ 
+
+/* --- ANIMATION FOR HEADER BUTTON SETUP | STARTS --- */ 
+        @keyframes moveInBottom {
+            /* - WHAT HAPPENS AT THE BEGINNING OF THE ANIMATION - */
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+        
+            /* - WHAT HAPPENS AT THE 100% (END) - */
+            100% {
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+/* --- ANIMATION FOR HEADER BUTTON SETUP | ENDS --- */ 
