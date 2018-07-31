@@ -26,7 +26,8 @@ Dark green: #28b485
 @import "components/_button.scss";
 
 /* - LAYOUT FOLDER FILES - */
-@import "layout/header.scss";
+@import "layout/_header.scss";
+@import "layout/_grid.scss";
 
 /* - PAGES FOLDER FILES - */
 @import "pages/_home.scss";

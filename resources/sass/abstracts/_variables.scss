@@ -1,5 +1,5 @@
 /* ------------------------------------------- */
-/* VARIABLES
+/* COLOR VARIABLES
 /* ------------------------------------------- */
 
 /* -- COLORS -- */
@@ -11,3 +11,11 @@ $color-primary-dark: #28b485;
 $color-gray-dark: #777; // Color for text
 $color-white: #fff; // Color White
 $color-black: #000; // Color Black
+
+/* ------------------------------------------- */
+/* GRID VARIABLES
+/* ------------------------------------------- */
+
+$grid-width: 114rem;    // MAX WIDTH
+$gutter-vertical: 8rem; // VERTICAL SPACING BETWEEN COLUMNS
+$gutter-horizontal: 6rem; // HORIZONTAL SPACING BETWEEN COLUMNS
