@@ -17,6 +17,10 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-gray-dark: #777; // Color for text
+$color-white: #fff; // Color White
+
+
 /* ------------------------------------------- */
 /* BASIC SETUP
 /* ------------------------------------------- */
@@ -38,7 +42,7 @@ body {
     font-weight: 400;
     /*font-size: 16px;*/
     line-height: 1.7;
-    color: #777;
+    color: $color-gray-dark;
     padding: 3rem;  /* Gives padding all around the body element, making white space on the sides. */
     box-sizing: border-box;
 }
@@ -73,8 +77,8 @@ body {
 }
 
 .btn--white {
-    background-color: #fff;
-    color: #777;
+    background-color: $color-white;
+    color: $color-gray-dark;
 }
 
 /* BUTTON WHITE FADE ANIMATION */
@@ -93,7 +97,7 @@ body {
 }
 
 .btn--white::after {
-    background-color: #fff;
+    background-color: $color-white;
 }
 
 .btn:hover::after {
@@ -142,7 +146,7 @@ body {
 }
 
 .heading-primary {
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 6rem;
