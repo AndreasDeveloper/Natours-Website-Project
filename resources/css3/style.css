@@ -7,9 +7,59 @@ Dark green: #28b485
 
 */
 /* ------------------------------------------- */
+/* 7-1 TYPE FOLDER / FILES IMPLEMENTATION
+/* ------------------------------------------- */
+/* - ABSTRACTS FOLDER FILES - */
+/* ------------------------------------------- */
 /* VARIABLES
 /* ------------------------------------------- */
 /* -- COLORS -- */
+/* - BASE FOLDER FILES - */
+/* ------------------------------------------- */
+/* ANIMATIONS FOR THE HEADER
+/* ------------------------------------------- */
+/* --- ANIMATION FOR HEADER TEXT SETUP | STARTS --- */
+@keyframes moveInLeft {
+  /* - WHAT HAPPENS AT THE BEGINNING OF THE ANIMATION - */
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  /* - WHAT HAPPENS AT THE 80% OF THE ANIMATION - */
+  80% {
+    transform: translateX(1.5rem); }
+  /* - WHAT HAPPENS AT THE 100% (END) - */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+/* --- ANIMATION FOR HEADER TEXT SETUP | ENDS --- */
+/* --- ANIMATION FOR HEADER SUB TEXT SETUP | STARTS --- */
+@keyframes moveInRight {
+  /* - WHAT HAPPENS AT THE BEGINNING OF THE ANIMATION - */
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  /* - WHAT HAPPENS AT THE 80% OF THE ANIMATION - */
+  80% {
+    transform: translateX(-1.5rem); }
+  /* - WHAT HAPPENS AT THE 100% (END) - */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+/* --- ANIMATION FOR HEADER SUB TEXT SETUP | ENDS --- */
+/* --- ANIMATION FOR HEADER BUTTON SETUP | STARTS --- */
+@keyframes moveInBottom {
+  /* - WHAT HAPPENS AT THE BEGINNING OF THE ANIMATION - */
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  /* - WHAT HAPPENS AT THE 100% (END) - */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+/* --- ANIMATION FOR HEADER BUTTON SETUP | ENDS --- */
 /* ------------------------------------------- */
 /* BASIC SETUP
 /* ------------------------------------------- */
@@ -21,9 +71,16 @@ Dark green: #28b485
   box-sizing: inherit; }
 
 html {
+  /* DEFINES WHAT REM IS */
   font-size: 62.5%;
   /* Takes 62.5% of the default font size (16px). 100 / 16 = 62.5  */ }
 
+body {
+  box-sizing: border-box; }
+
+/* ------------------------------------------- */
+/* BODY TYPOGRAPHY SETUP
+/* ------------------------------------------- */
 body {
   font-family: 'Lato', 'Arial', 'sans-serif';
   font-weight: 400;
@@ -31,14 +88,39 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  /* Gives padding all around the body element, making white space on the sides. */
-  box-sizing: border-box; }
+  /* Gives padding all around the body element, making white space on the sides. */ }
 
 /* ------------------------------------------- */
-/* REUSABLE COMPONENTS
+/* HEADING PRIMARY | TEXT / STLE H1
 /* ------------------------------------------- */
-/* ------ BUTTONS ------ */
-/* ---- BUTTON WHITE ---- */
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    /* -- ANIMATION IMPLEMENTATION -- */
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    /* -- ANIMATION IMPLEMENTATION -- */
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
+
+/* - COMPONENTS FOLDER FILES - */
+/* ------------------------------------------- */
+/* BUTTON WHITE | HEADER
+/* ------------------------------------------- */
 /* BUTTON WHITE NESTING */
 .btn {
   /* BUTTON ON HOVER NESTING */
@@ -86,6 +168,7 @@ body {
     animation-delay: .75s;
     animation-fill-mode: backwards; }
 
+/* - LAYOUT FOLDER FILES - */
 /* ------------------------------------------- */
 /* HEADER
 /* ------------------------------------------- */
@@ -109,69 +192,4 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    /* -- ANIMATION IMPLEMENTATION -- */
-    animation-name: moveInLeft;
-    animation-duration: 2s;
-    animation-timing-function: ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    /* -- ANIMATION IMPLEMENTATION -- */
-    animation-name: moveInRight;
-    animation-duration: 2s;
-    animation-timing-function: ease-out; }
-
-/* --- ANIMATION FOR HEADER TEXT SETUP | STARTS --- */
-@keyframes moveInLeft {
-  /* - WHAT HAPPENS AT THE BEGINNING OF THE ANIMATION - */
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  /* - WHAT HAPPENS AT THE 80% OF THE ANIMATION - */
-  80% {
-    transform: translateX(1.5rem); }
-  /* - WHAT HAPPENS AT THE 100% (END) - */
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-/* --- ANIMATION FOR HEADER TEXT SETUP | ENDS --- */
-/* --- ANIMATION FOR HEADER SUB TEXT SETUP | STARTS --- */
-@keyframes moveInRight {
-  /* - WHAT HAPPENS AT THE BEGINNING OF THE ANIMATION - */
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  /* - WHAT HAPPENS AT THE 80% OF THE ANIMATION - */
-  80% {
-    transform: translateX(-1.5rem); }
-  /* - WHAT HAPPENS AT THE 100% (END) - */
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-/* --- ANIMATION FOR HEADER SUB TEXT SETUP | ENDS --- */
-/* --- ANIMATION FOR HEADER BUTTON SETUP | STARTS --- */
-@keyframes moveInBottom {
-  /* - WHAT HAPPENS AT THE BEGINNING OF THE ANIMATION - */
-  0% {
-    opacity: 0;
-    transform: translateY(5rem); }
-  /* - WHAT HAPPENS AT THE 100% (END) - */
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-/* --- ANIMATION FOR HEADER BUTTON SETUP | ENDS --- */
+/* - PAGES FOLDER FILES - */
