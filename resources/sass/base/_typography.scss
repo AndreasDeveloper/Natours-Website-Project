@@ -67,3 +67,21 @@ body {
         transform: skewY(2deg);
     } */ // UNCOMMENT FOR ANIMATION EFFECT
 }
+
+/* ------------------------------------------- */
+/* HEADING TERTIARY + PARAGRAPH| TEXT / STYLE H3/P
+/* ------------------------------------------- */
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
