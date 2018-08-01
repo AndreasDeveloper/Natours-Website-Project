@@ -97,7 +97,7 @@ body {
   /* Gives padding all around the body element, making white space on the sides. */ }
 
 /* ------------------------------------------- */
-/* HEADING PRIMARY | TEXT / STLE H1
+/* HEADING PRIMARY | TEXT / STYLE H1
 /* ------------------------------------------- */
 .heading-primary {
   color: #fff;
@@ -122,6 +122,36 @@ body {
     animation-name: moveInRight;
     animation-duration: 2s;
     animation-timing-function: ease-out; }
+
+/* ------------------------------------------- */
+/* HEADING SECONDARY | TEXT / STYLE H2
+/* ------------------------------------------- */
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  /*letter-spacing: .2rem;
+    transition: all .2s; */
+  /*
+    &:hover {
+        transform: skewY(2deg);
+    } */ }
+
+/* ---------------------------------------------------------- */
+/* U-CENTER-TEXT CLASS IN ABOUT SECTION | CENTERING THE TEXT
+/* ---------------------------------------------------------- */
+.u-center-text {
+  text-align: center; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-BOTTOM-8 CLASS IN ABOUT SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
 
 /* - COMPONENTS FOLDER FILES - */
 /* ------------------------------------------- */
@@ -203,8 +233,7 @@ body {
 /* ------------------------------------------- */
 .row {
   max-width: 114rem;
-  margin: 0 auto;
-  background-color: #000; }
+  margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row::after {
@@ -212,7 +241,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: red;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
@@ -230,3 +258,10 @@ body {
     width: calc( 3 * ((100% - 3 * 6rem) / 3) + 2 * 6rem); }
 
 /* - PAGES FOLDER FILES - */
+/* ------------------------------------------- */
+/* SECTION ABOUT | PAGE
+/* ------------------------------------------- */
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }

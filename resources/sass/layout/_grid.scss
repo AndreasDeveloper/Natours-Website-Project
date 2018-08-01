@@ -4,8 +4,7 @@
 .row {
     max-width: $grid-width;
     margin: 0 auto;
-    background-color: #000;
-
+    
     &:not(:last-child) {    // SELECT EVERYTHING EXCEPT THE LAST CHILD (ELEMENT) \\
         margin-bottom: $gutter-vertical;
     }
@@ -17,7 +16,6 @@
     // ELEMENTS STARTING WITH COL- . ^ IS THE SYMBOL FOR SELECTING ALL ELEMENTS WITH THE SPECIFIC CODE \\
 
     [class^="col-"] {      
-        background-color: red;
         float: left;
 
         &:not(:last-child) {
