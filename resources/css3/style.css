@@ -14,6 +14,28 @@ Dark green: #28b485
 /* CLAERFIX MIXIN FOR THE GRID
 /* ------------------------------------------- */
 /* ------------------------------------------- */
+/* MIXIN THAT CENTERS THE ELEMENTS TO VH
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MEDIA QUERY MANAGER
+/* ------------------------------------------- */
+/* // SIZES / DEVICES \\
+    0 - 600px > Phone
+    600 - 900px > Tablet Portrait
+    900 - 1200px > Tablet Landscape
+    [1200 - 18009 is where our normal style apply
+    1800px + >Big Desktop
+
+    1em = 16px - KIM
+*/
+/* // BREAKPOINT NAMES \\
+    $breakpoint argument choices:
+    - phone
+    - tab-port
+    - tab-land
+    - big-desktop
+*/
+/* ------------------------------------------- */
 /* COLOR VARIABLES
 /* ------------------------------------------- */
 /* -- COLORS -- */
@@ -83,7 +105,20 @@ Dark green: #28b485
 html {
   /* DEFINES WHAT REM IS */
   font-size: 62.5%;
-  /* Takes 62.5% of the default font size (16px). 100 / 16 = 62.5  */ }
+  /* Takes 62.5% of the default font size (16px). 100 / 16 = 62.5  */
+  /* || 1rem = 10px; 10px/16px = 62.5% || */ }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
