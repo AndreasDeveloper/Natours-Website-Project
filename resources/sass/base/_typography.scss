@@ -7,7 +7,6 @@ body {
     /*font-size: 16px;*/
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;  /* Gives padding all around the body element, making white space on the sides. */
 }
 
 
@@ -20,6 +19,7 @@ body {
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 6rem;
+    
     &--main {
         display: block;
         font-size: 6rem;
@@ -30,6 +30,12 @@ body {
         animation-name: moveInLeft;
         animation-duration: 2s;
         animation-timing-function: ease-out;
+
+        // * --- MEDIA QUERIES --- * \\
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
     
     &--sub {
@@ -42,6 +48,11 @@ body {
         animation-name: moveInRight;
         animation-duration: 2s;
         animation-timing-function: ease-out;
+
+        // * --- MEDIA QUERIES --- * \\
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -66,6 +77,15 @@ body {
     &:hover {
         transform: skewY(2deg);
     } */ // UNCOMMENT FOR ANIMATION EFFECT
+
+    // * --- MEDIA QUERIES --- * \\
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
 }
 
 /* --------------------------------------------- */
