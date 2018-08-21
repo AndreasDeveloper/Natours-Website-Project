@@ -19,9 +19,14 @@
 
 .section-features {
     padding: 20rem 0;
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.800), rgba($color-primary-dark, 0.800)) ,url(../images/nat-4.jpg);
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.800), rgba($color-primary-dark, 0.800)) ,url(../images/nat-4-small.jpg);
     background-size: cover;
     margin-top: -15rem;
+
+    // * --- MEDIA QUERIES FOR MAKING PICTURES RESPONSIVE --- * \\
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {   // and (min-width: 600px) is the breakpoint set which will display the content below. Everything above 600px will be applied in the content below \\
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.800), rgba($color-primary-dark, 0.800)) ,url(../images/nat-4.jpg);
+    }
 
     // SKEWING THE IMAGE TO A SPECIFIC DEGREE \\
     transform: skewY(-7deg);
@@ -82,10 +87,15 @@
 
 .booking {
     // SETUP THE "CLIP PATH" LIKE STYLE ON BOOKING FORM , WITHOUT USING THE CLIP PATH \\
-    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url(../images/nat-10.jpg);
+    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url(../images/nat-10-small.jpg);
     background-size: 100%;
     border-radius: $border-radius-default;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+    // * --- MEDIA QUERIES FOR MAKING PICTURES RESPONSIVE --- * \\
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {   // and (min-width: 600px) is the breakpoint set which will display the content below. Everything above 600px will be applied in the content below \\
+        background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%) ,url(../images/nat-10.jpg);
+    }
 
     &__form {
         width: 50%;

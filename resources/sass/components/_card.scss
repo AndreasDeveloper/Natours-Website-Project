@@ -209,17 +209,32 @@
 
             &--1 {
                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), 
-                url(../images/nat-5.jpg);
+                url(../images/nat-5-small.jpg);
+
+            // * --- MEDIA QUERIES FOR MAKING PICTURES RESPONSIVE --- * \\
+            @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {   // and (min-width: 600px) is the breakpoint set which will display the content below. Everything above 600px will be applied in the content below \\
+             background-image: linear-gradient(to right bottom, $color-secondary-light), $color-secondary-dark ,url(../images/nat-5.jpg);
+    }
             }
 
             &--2 {
                 background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
-                url(../images/nat-6.jpg);
+                url(../images/nat-6-small.jpg);
+
+            // * --- MEDIA QUERIES FOR MAKING PICTURES RESPONSIVE --- * \\
+            @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {   // and (min-width: 600px) is the breakpoint set which will display the content below. Everything above 600px will be applied in the content below \\
+            background-image: linear-gradient(to right bottom, $color-primary-light), $color-primary-dark, url(../images/nat-6.jpg);
+                }
             }
 
             &--3 {
                 background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
-                url(../images/nat-7.jpg);
+                url(../images/nat-7-small.jpg);
+
+            // * --- MEDIA QUERIES FOR MAKING PICTURES RESPONSIVE --- * \\
+            @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {   // and (min-width: 600px) is the breakpoint set which will display the content below. Everything above 600px will be applied in the content below \\
+            background-image: linear-gradient(to right bottom, $color-tertiary-light), $color-tertiary-dark, url(../images/nat-7.jpg);
+            }
             }
         }
 
