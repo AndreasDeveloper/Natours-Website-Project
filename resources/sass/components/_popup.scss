@@ -102,4 +102,16 @@
             color: $color-primary;
         }
     }
+
+    // * --- MEDIA QUERIES --- * \\
+    //                           \\
+    // * --- ------------- --- * \\
+
+    @include respond(tab-port) {
+
+        &__content {
+            width: 100%;
+
+        }
+    }
 }

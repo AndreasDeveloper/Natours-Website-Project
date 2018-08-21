@@ -67,4 +67,28 @@
         filter: blur(3px) brightness(80%);
     }
 
+
+    // * --- MEDIA QUERIES --- * \\
+    //                           \\
+    // * --- ------------- --- * \\
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+
+         // SHAPE IS THE CONTAINER WHERE THE IMAGE AND TEXT ON HOVER SHOWS \\
+        &__shape {
+            transform: translateX(-3rem) skewX(0); // USE INSTEAD OF MARGIN AND PADDING \\
+        }
+
+        // TEXT IS THE h3 ELEMENT AND PARAGRAPH \\
+        &__text {
+            transform: skewX(0);
+        }
+    }
 }
