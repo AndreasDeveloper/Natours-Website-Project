@@ -96,6 +96,11 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
+
+    // * --- MEDIA QUERIES --- * \\
+    @include respond(phone) {
+        text-align: center;
+    }
 }
 
 .paragraph {

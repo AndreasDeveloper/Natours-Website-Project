@@ -373,7 +373,13 @@
         <!-- FOOTER STARTS -->
         <footer class="footer">
             <div class="footer__logo-box">
-                <img src="resources/images/logo-green-2x.png" alt="Natours Logo" class="footer__logo">
+
+                <!-- IMAGE LOGO OPTIMIZATION FOR HIGH RES / LOW RES SCREENS | ART DIRECTION -->
+                <picture class="footer__logo">                                                                                <!-- IF THE SIZE IS LESS THEN 600px APPLY THIS SOURCE -->
+                    <source srcset="resources/images/logo-green-small-1x.png 1x, resources/images/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                    <img srcset="resources/images/logo-green-1x.png 1x, resources/images/logo-green-2x.png 2x" alt="Natours Logo">      <!-- DENISTY SWITCHING -->
+                </picture>
+
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -421,8 +427,5 @@
             </div>
         </div>
         <!-- POPUP SETUP ENDS -->
-
-
-
     </body>
 </html>
