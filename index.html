@@ -85,9 +85,33 @@
                      
                      <div class="col-1-of-2">
                         <div class="composition">
+                                            <!-- 300 and 1000 w is width of the pics -->
+                                                        <!-- PICTURE 1 -->
+                            <img srcset="resources/images/nat-1.jpg 300w, resources/images/nat-1-large.jpg 1000w" 
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            alt="Photo 1"
+                            class="composition__photo composition__photo--p1"
+                            src="resources/images/nat-1-large.jpg">  
+
+                                                        <!-- PICTURE 2 -->
+                            <img srcset="resources/images/nat-2.jpg 300w, resources/images/nat-2-large.jpg 1000w" 
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            alt="Photo 2"
+                            class="composition__photo composition__photo--p2"
+                            src="resources/images/nat-2-large.jpg">  
+
+                                                        <!-- PICTURE 3 -->
+                            <img srcset="resources/images/nat-3.jpg 300w, resources/images/nat-3-large.jpg 1000w" 
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            alt="Photo 3"
+                            class="composition__photo composition__photo--p3"
+                            src="resources/images/nat-3-large.jpg">  
+
+                            <!--
                             <img src="resources/images/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                             <img src="resources/images/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
                             <img src="resources/images/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            -->
                         </div>
                      </div>
                  </div>
@@ -274,7 +298,15 @@
                 <div class="row">
                     <div class="story">
                         <figure class="story__shape">
-                            <img src="resources/images/nat-8.jpg" alt="Story Image 1" class="story__img">
+
+                                            <!-- PICTURE 1 | MAKING IMAGE RESPONISVE -->
+                             <img srcset="resources/images/nat-8-small.jpg 300w, resources/images/nat-8.jpg 1000w" 
+                             sizes="(max-width: 900px) 15vw, (max-width: 600px) 23vw, 300px"
+                             alt="Story Image 1"
+                             class="story__img"
+                             src="resources/images/nat-8.jpg">  
+
+                            <!--<img src="resources/images/nat-8.jpg" alt="Story Image 1" class="story__img">-->
                             <figcaption class="story__caption">Marry Smith</figcaption>
                         </figure>
                         <div class="story__text">
@@ -293,7 +325,15 @@
                 <div class="row">
                     <div class="story">
                         <figure class="story__shape">
-                            <img src="resources/images/nat-9.jpg" alt="Story Image 1" class="story__img">
+
+                                        <!-- PICTURE 2 | MAKING IMAGE RESPONISVE -->
+                            <img srcset="resources/images/nat-9-small.jpg 300w, resources/images/nat-9.jpg 1000w" 
+                            sizes="(max-width: 900px) 15vw, (max-width: 600px) 23vw, 300px"
+                            alt="Story Image 2"
+                            class="story__img"
+                            src="resources/images/nat-9.jpg">  
+
+                            <!--<img src="resources/images/nat-9.jpg" alt="Story Image 1" class="story__img">-->
                             <figcaption class="story__caption">Jack Wilson</figcaption>
                         </figure>
                         <div class="story__text">
@@ -377,7 +417,7 @@
                 <!-- IMAGE LOGO OPTIMIZATION FOR HIGH RES / LOW RES SCREENS | ART DIRECTION -->
                 <picture class="footer__logo">                                                                                <!-- IF THE SIZE IS LESS THEN 600px APPLY THIS SOURCE -->
                     <source srcset="resources/images/logo-green-small-1x.png 1x, resources/images/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
-                    <img srcset="resources/images/logo-green-1x.png 1x, resources/images/logo-green-2x.png 2x" alt="Natours Logo">      <!-- DENISTY SWITCHING -->
+                    <img srcset="resources/images/logo-green-1x.png 1x, resources/images/logo-green-2x.png 2x" alt="Natours Logo" src="resources/images/logo-green-2x.png"> <!-- DENISTY SWITCHING -->
                 </picture>
 
             </div>
