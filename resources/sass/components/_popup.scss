@@ -14,6 +14,13 @@
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
+    
+    // BLURS THE BACKGROUND OF POPUP INSTEAD OF MAKING IT DARKER. | SAFARI ONLY \\
+    @supports(-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem)) {
+        -webkit-backdrop-filter: blur(1rem);
+        backdrop-filter: blur(1rem);
+        background-color: rgba($color-black, .3);
+    }
 
     &__content {
         @include center-vh;

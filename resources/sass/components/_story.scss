@@ -21,10 +21,21 @@
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         position: relative;
+        overflow: hidden;
+        border-radius: 50%;
 
         -webkit-shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg); // USE INSTEAD OF MARGIN AND PADDING \\
+
+         // IMPLEMENTING CLIP PATH PROPERTY TO WORK ON OLDER VERSION OF MOZILLA FIREFOX \\
+        @supports(clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
     }
 
     // IMAGE IN THE SHAPE \\
