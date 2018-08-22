@@ -19,9 +19,9 @@
     }
 
     // * --- MEDIA QUERIES FOR MAKING PICTURES RESPONSIVE --- * \\
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), 
-           (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),  // SAFARI SUPPORT IMPLEMENTATION
-           (min-width: 125em) {   // and (min-width: 600px) is the breakpoint set which will display the content below. Everything above 600px will be applied in the content below \\
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), 
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),  // SAFARI SUPPORT IMPLEMENTATION
+        only screen and (min-width: 125em) {   // and (min-width: 600px) is the breakpoint set which will display the content below. Everything above 600px will be applied in the content below \\
                 background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.800), rgba($color-primary-dark, 0.800)) ,url(../images/hero.jpg);
         }
 
