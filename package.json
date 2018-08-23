@@ -1,7 +1,7 @@
 {
-  "name": "natours",
+  "name": "Natours",
   "version": "1.0.0",
-  "description": "Website related to providing tours to users around the world.",
+  "description": "Natours is a website that provides tour services to people around the world.",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass resources/sass/main.scss resources/css3/style.css -w",
